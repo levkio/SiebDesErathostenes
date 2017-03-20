@@ -10,6 +10,8 @@ namespace SiebDesErathostenes
     {
         static void Main(string[] args)
         {
+           new Erathostenes().calculatePrim(100);
+
         }
     }
 }

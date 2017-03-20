@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiebDesErathostenes", "SiebDesErathostenes\SiebDesErathostenes.csproj", "{032C1BE0-194A-4E5F-8F5B-483B9B1B31AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaylorReiheSinus", "TaylorReiheSinus\TaylorReiheSinus.csproj", "{7E0EFBBD-08FC-47DD-899C-5EED4BB53A5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{032C1BE0-194A-4E5F-8F5B-483B9B1B31AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{032C1BE0-194A-4E5F-8F5B-483B9B1B31AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{032C1BE0-194A-4E5F-8F5B-483B9B1B31AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0EFBBD-08FC-47DD-899C-5EED4BB53A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0EFBBD-08FC-47DD-899C-5EED4BB53A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0EFBBD-08FC-47DD-899C-5EED4BB53A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0EFBBD-08FC-47DD-899C-5EED4BB53A5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
