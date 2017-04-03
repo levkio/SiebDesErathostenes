@@ -8,6 +8,11 @@ namespace TaylorReiheSinus
 {
     class Program
     {
+        /// <summary>
+        /// Taylor := Summe von n = 0 bis unendlich: (-1)^n* x^2n+1 / (2n+1)! 
+        /// => x/1! + x^3 / 3! + x^5/ 5! = x - x^3/6 + x^5/120
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.WriteLine("Zahl in Gradmass eingeben 0-360");
@@ -17,7 +22,6 @@ namespace TaylorReiheSinus
             Console.WriteLine("Iteration angegeben:");
             int n = int.Parse(Console.ReadLine());
             taylor(bog,n);
-
         }
 
         static int fak(int a)
