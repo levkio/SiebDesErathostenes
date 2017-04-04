@@ -32,10 +32,7 @@ namespace Arbeitszettel_3_4_17
             Console.WriteLine("QWo(49): {0}", QWu(49));
             int erg = Sum(Pot(7, 5), 3); 
             Console.WriteLine("7^5 + 3: " + erg);
-            int erg2 = Sum(4, 10);
-            erg2 = Dif(erg2, 5);
-            erg2 = Qou(erg2, 2);
-            erg2 = Qou(erg2, 3);
+
 
             Console.ReadKey();
         }
@@ -51,55 +48,57 @@ namespace Arbeitszettel_3_4_17
 
         private static int Sum(int sumA, int sumB)
         {
-            int sum = sumA;
-            for(int i = 0; i < sumB; i++)
+            while(0 < sumB)
             {
-                sum = Ink(sum);
+                sumA = Ink(sumA);
+                sumB = Dekrement(sumB);
             }
-            return sum;
+            return sumA;
         }
         private static int Dif(int min, int sub)
         {
-            int dif = min;
-            for(int i = 0; i < sub; i++)
+            while(0 < sub)
             {
-                dif = Dekrement(dif);
+                min = Dekrement(min);
+                sub = Dekrement(sub);
             }
-            return dif;
+            return min;
         }
 
         private static int Pro(int fakA, int fakB)
         {
-            int prod = 0;
-            for (int i = 0; i < fakB; i++)
+            if (fakA == 0 || fakB == 0)
+                return 0;
+            else
             {
-                for(int j = 0; j < fakA; j++)
-                {
-                    prod = Ink(prod);
-                }
+                return Sum(fakA, Pro(fakA, Dekrement(fakB)));
             }
-            return prod;
         }
         private static int Pot(int basis, int exp)
         {
-            int potenz = basis;
-            exp = Dekrement(exp);
-            while(exp > 0)
+            if (exp == 1)
+                return basis;
+            if(exp > 1)
             {
-                potenz = Pro(potenz, basis);
-                exp = Dekrement(exp);
+                return Pro(basis,Pot(basis, exp - 1));
             }
-            return potenz;
+            return 1;
+            
         
         }
         private static int Qou(int divd, int divr)
         {
-            int ret = 0;
-            while(divd > 0)
+            if (divr == 0)
+                return 0; // nice try
+            if (divr == 1)
+                return divd;
+            if(divr > 1)
             {
-                divd = Dif(divd, divr);
-                ret = Ink(ret);
-            } return ret;
+                divd = Dif(divd - divr);
+                return Sum(1 + Qou(divd, divr));
+            }
+            return 1;
+
         }
 
         private static int QWu(int rad)
